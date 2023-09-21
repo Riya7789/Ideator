@@ -1,8 +1,9 @@
+<br>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add Idea
 </button>
-
+<br>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -11,6 +12,7 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Idea</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <%= simple_form_for Idea.new do |f| %>
       <div class="modal-body">
           <%= f.input :description %>
@@ -26,6 +28,7 @@
 </div>
 
 <% @ideas.each do |idea| %>
+<br>
   <div class="card">
     <div class="card-body">
       <blockquote class="blockquote mb-0">
@@ -38,3 +41,7 @@
     </div>
   </div>
 <% end %>
+
+<div class="d-flex justify-content-center will_pagination">
+  <%= will_paginate @ideas %>
+</div>

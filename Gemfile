@@ -8,6 +8,8 @@ gem "rails", "~> 7.0.8"
 
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
+gem 'will_paginate', '~> 3.3'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
