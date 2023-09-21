@@ -8,9 +8,25 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="preconnect" href="https://fonts.googleapis.coht@0,300;0,500;1,300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset ="UTF-8">
   </head>
 
   <body>
-    <%= yield %>
+  <div id="wrap">
+    <%= render 'shared/nav' %>
+
+      <div class = "container">
+      <%= yield %>
+    </div>
+
+  </div><!-- wrap -->
+
+  <div class= "footer text-center">
+  <%= render partial: 'shared/footer' %>
+  
   </body>
 </html>
